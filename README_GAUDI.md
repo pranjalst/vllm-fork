@@ -1,4 +1,4 @@
-# vLLM with Intel® Gaudi® AI Accelerators
+![image](https://github.com/user-attachments/assets/b5e13bdd-4021-4e3b-acbe-dce7add80fae)# vLLM with Intel® Gaudi® AI Accelerators
 
 This README provides instructions on how to run vLLM with Intel Gaudi devices.
 
@@ -385,7 +385,7 @@ Once you have completed the model calibration process and collected the measurem
 
 ```bash
 export QUANT_CONFIG=/path/to/quant/config/inc/meta-llama-3.1-405b-instruct/maxabs_quant_g3.json
-vllm serve meta-llama/Llama-3.1-405B-Instruct --quantization inc --kv-cache-dtype fp8_inc --weights-load-device cpu --tensor_paralel_size 8
+vllm serve meta-llama/Llama-3.1-405B-Instruct --quantization inc --kv-cache-dtype fp8_inc --weights-load-device cpu --tensor-parallel-size 8
 ```
 
 `QUANT_CONFIG` is an environment variable that points to the measurement or quantization configuration file. The measurement configuration file is used during the calibration procedure to collect
